@@ -60,6 +60,8 @@ As a Member, I can opt to receive notifications about events which people on my 
 
 As a Member, I can do everything a user can do.
 
+As a Member, I can view the wishlists of those on my friends and family list.
+
 As a Member, I can purchase and download games from it's descriptive page.
 
 As a Member, I can games to my wishlist from the browse screen or from the game's descriptive page.
@@ -70,7 +72,7 @@ As a Member, I can submit ratings for games from it's descriptive page.
 
 As a Member, I can pay for games a number of ways; using my credit card or paypal, using someone else's credit card, redeeming a gift card (?) or making a payment directly from online banking (?)
 
-As a Member, I can send private messages to other members and admins
+As a Member, I can send private messages to other members and admins.
 
 As a Member, I can start new threads and respond to threads on the site's forums
 
