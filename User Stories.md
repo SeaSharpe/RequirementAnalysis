@@ -8,9 +8,51 @@ For these user stories, the users are broken down into three categories:
 ### Visitor User Stories
 As a Visitor, I can Browse available games and read reviews.
 
+As a Visitor, I can view events.
+
 As a Visitor, I can easily sign up for an account at various points in the website (ie. at entry, when clicking on "purchase game"...etc)
 
 ### Member User Stories
+
+#####	Login Stories
+
+As a Member, I can ask the site to email me my username and password info without logging in.
+
+As a Member, I can login into the site.
+
+
+#####	Profile Stories
+
+As a Member, I can set up a profile and edit my profile.
+
+As a Member, I can decide what promotional emails to receive from my profile.
+
+As a Member, I can set my platform preferences from my profile.
+
+As a Member, I can set my game category preferences from my profile.
+
+As a Member, I can set my shipping address from my profile.
+
+As a Member, I can set my platform preferences from my profile.
+
+As a Member, I can change my password from my profile.
+
+As a Member, my profile keeps track of other users for me (friends and family?).
+
+As a Member, I can create, add to and remove games from my wishlist.
+
+#####	Events Stories
+
+As a Member, I can register for events.
+
+As a Member, I can view events that I am registered.
+
+As a Member, I can opt to receive notifications to remind me of events which I have registered for.
+
+As a Member, I can opt to receive notifications about events which people on my friends and family list are registered for.
+
+#####	General Stories
+
 As a Member, I can do everything a user can do.
 
 As a Member, I can purchase and download games.
@@ -26,6 +68,8 @@ As a Member, I can send private messages to other members and admins
 As a Member, I can start new threads and respond to threads on the site's forums
 
 ### Admin User Stories
+
+As a Admin, I can approve member reviews of games.
 
 #####   Adding a game
 
@@ -64,5 +108,36 @@ As a Admin, I can edit, add or remove any download restrictions on a game immedi
 As a Admin, I can delete a game from the download library immediately, or to take effect at some point in the future.
 
 As a Admin, when I delete a game I can remove it completely or leave the page up so the users know that the game is no longer available (and edit the summary to explain why)
+
+As a Admin. when a game is deleted, I am notified of any situation where a member may have paid for but not received a game and can easily offer a refund.
+
+#####	Reports
+
+As a Admin, I can generate a sales report for a specific game or set of games (by genre, price or release date)
+
+As a Admin, I can generate a sales report for a subset of users.
+
+As a Admin, I can generate a sales report for a promotion.
+
+As a Admin, I can generate a sales report for the site as a whole.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
