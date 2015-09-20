@@ -34,18 +34,24 @@ As a Admin, when I add a new game I can choose to include a summary.
 
 As a Admin, when I add a new game I can choose to include screenshots.
 
-As a Admin, when I add a new game I can choose to include promotions (1/2 price for the first 100 downloads...etc).
+As a Admin, when I add a new game I can choose to include promotions based on download order (1/2 price for the first 100 downloads...etc).
+
+As a Admin, when I add a new game I can choose to include promotions based on time of download (1/2 price for today only, boxing day blowout).
+
+As a Admin, when I add a new game I can choose to include promotions based on user (1/2 price for game purchases on your birthday).
 
 As a Admin, when I add a new game I can choose to limit who can download the game (special edition package; available only to priviliged users).
+
 #####   Editing a game
-As a Admin, I can edit a game's details, altering the price. 
+As a Admin, I can edit a game's price. 
 
-As a Admin, I can edit a game's details, adding, editing or removing a summary.
+As a Admin, I can edit, add or remove a game's summary.
 
-As a Admin, I can edit a game's details, adding or removing screenshots.
+As a Admin, I can add or remove a game's screenshots.
 
-As a Admin, I can edit a game's details, adding, editing or removing promotions.
+As a Admin, I can edit, add or remove a game's promotions.
 
-As a Admin, I can edit a game's details, adding, editing or removing promotions.
+As a Admin, I can edit, add or remove any download restrictions on a game
+#####   Deleting a game
 
 
