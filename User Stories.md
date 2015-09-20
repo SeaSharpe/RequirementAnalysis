@@ -6,7 +6,12 @@ For these user stories, the users are broken down into three categories:
   - Admin: Superuser
   
 ### Visitor User Stories
-As a Visitor, I can Browse available games and read reviews.
+
+As a Visitor, I can browse the entirety of the games available on the website or browse by keyword, game category, price, user rating and/or release date.
+
+As a Visitor, I can view the details of a game by navigating to a game's descriptive page.
+
+As a Visitor, I can views reviews for games on it's descriptive page.
 
 As a Visitor, I can view events.
 
@@ -55,11 +60,13 @@ As a Member, I can opt to receive notifications about events which people on my 
 
 As a Member, I can do everything a user can do.
 
-As a Member, I can purchase and download games.
+As a Member, I can purchase and download games from it's descriptive page.
 
-As a Member, I can leave reviews for games.
+As a Member, I can games to my wishlist from the browse screen or from the game's descriptive page.
 
-As a Member, I can submit ratings for games.
+As a Member, I can leave reviews for games from it's descriptive page.
+
+As a Member, I can submit ratings for games from it's descriptive page.
 
 As a Member, I can pay for games a number of ways; using my credit card or paypal, using someone else's credit card, redeeming a gift card (?) or making a payment directly from online banking (?)
 
