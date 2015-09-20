@@ -49,21 +49,20 @@ As a Admin, when I add a new game I can choose to limit who can download the gam
 
 #####   Editing a game
 
-As a Admin, I can edit a game's price. 
+As a Admin, I can edit a game's price immediately, or to take effect at some point in the future.
 
-As a Admin, I can edit, add or remove a game's summary.
+As a Admin, I can edit, add or remove a game's summary immediately, or to take effect at some point in the future.
 
-As a Admin, I can add or remove a game's screenshots.
+As a Admin, I can add or remove a game's screenshots immediately, or to take effect at some point in the future.
 
-As a Admin, I can edit, add or remove a game's promotions.
+As a Admin, I can edit, add or remove a game's promotions immediately, or to take effect at some point in the future.
 
-As a Admin, I can edit, add or remove any download restrictions on a game
+As a Admin, I can edit, add or remove any download restrictions on a game immediately, or to take effect at some point in the future.
 
 #####   Deleting a game
 
-As a Admin, I can delete a game from the download library 
+As a Admin, I can delete a game from the download library immediately, or to take effect at some point in the future.
 
 As a Admin, when I delete a game I can remove it completely or leave the page up so the users know that the game is no longer available (and edit the summary to explain why)
 
-As a Admin, I can set a game to be unavailable at a certain point (license to sell the game expires at midnight...etc)
 
