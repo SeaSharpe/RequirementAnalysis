@@ -4,6 +4,7 @@ For these user stories, the user are broken down into three categories:
   - Visitor: User with no account
   - Member: User with an account
   - Admin: Superuser
+  
 ### Visitor User Stories
 As a Visitor, I can Browse available games and read reviews.
 
