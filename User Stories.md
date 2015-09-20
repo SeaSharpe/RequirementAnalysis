@@ -111,15 +111,33 @@ As a Admin, when I delete a game I can remove it completely or leave the page up
 
 As a Admin. when a game is deleted, I am notified of any situation where a member may have paid for but not received a game and can easily offer a refund.
 
+#####	Events
+
+As a Admin, I can create a descriptive page for an event.
+
+As a Admin, I can set the descriptive page to make a event open for registration immediately or at some point in the future. I can also establish a registration close date.
+
+As a Admin, I can set a max number of users for an event.
+
+As a Admin, I can view event attendees.
+
+As a Admin, I can easily set up awards to be assigned to attendees who participate in events or who perform according to specific criteria (highest score).
+
 #####	Reports
+
+As a Admin I can generate a report listing all games.
+
+As a Admin I can generate a report listing all the details for a game.
+
+As a Admin I can generate a report listing all members
+
+As a Admin I can generate a report listing all the details for a member.
+
+As a Admin I can generate a report listing games and their quantities which are present on user wishlists.
 
 As a Admin, I can generate a sales report for a specific game or set of games (by genre, price or release date)
 
-As a Admin, I can generate a sales report for a subset of users.
-
 As a Admin, I can generate a sales report for a promotion.
-
-As a Admin, I can generate a sales report for the site as a whole.
 
 
 
