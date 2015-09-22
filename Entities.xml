@@ -101,6 +101,16 @@
 <row name="name" null="1" autoincrement="0">
 <datatype>VARCHAR(255)</datatype>
 <default>NULL</default></row>
+<row name="releaseDate" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default></row>
+<row name="suggestedRetailPrice" null="1" autoincrement="0">
+<datatype>DECIMAL</datatype>
+<default>NULL</default></row>
+<row name="platformID" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="platform" row="id" />
+</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
@@ -131,7 +141,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="661" y="384" name="order">
+<table x="668" y="391" name="order">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -183,27 +193,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="834" y="24" name="gamePlatform">
-<row name="gameID" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="game" row="id" />
-</row>
-<row name="platformID" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="platform" row="id" />
-</row>
-<row name="suggestedRetailPrice" null="1" autoincrement="0">
-<datatype>DECIMAL</datatype>
-<default>NULL</default></row>
-<row name="releaseDate" null="1" autoincrement="0">
-<datatype>DATE</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>gameID</part>
-<part>platformID</part>
-</key>
-</table>
-<table x="830" y="312" name="category">
+<table x="1020" y="234" name="category">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -267,11 +257,11 @@
 </key>
 </table>
 <table x="248" y="442" name="friendship">
-<row name="frendeeID" null="1" autoincrement="0">
+<row name="friendeeID" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="user" row="id" />
 </row>
-<row name="frenderID" null="1" autoincrement="0">
+<row name="frienderID" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="user" row="id" />
 </row>
@@ -284,7 +274,7 @@
 <key type="PRIMARY" name="">
 </key>
 </table>
-<table x="666" y="126" name="review">
+<table x="666" y="179" name="review">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -296,10 +286,6 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="user" row="id" />
 </row>
-<row name="platformID" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="platform" row="id" />
-</row>
 <row name="subject" null="1" autoincrement="0">
 <datatype>VARCHAR(300)</datatype>
 <default>NULL</default></row>
@@ -309,10 +295,10 @@
 <row name="dateCreated" null="1" autoincrement="0">
 <datatype>DATE</datatype>
 <default>NULL</default></row>
-<row name="dateModified" null="1" autoincrement="0">
+<row name="dateDeleted" null="1" autoincrement="0">
 <datatype>DATE</datatype>
 <default>NULL</default></row>
-<row name="dateDeleted" null="1" autoincrement="0">
+<row name="dateVerified" null="1" autoincrement="0">
 <datatype>DATE</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">

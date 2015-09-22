@@ -11,7 +11,7 @@
 -- ---
 
 DROP TABLE IF EXISTS `postalAddress`;
-    
+
 CREATE TABLE `postalAddress` (
   `userAddressID` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `addressLine1` VARCHAR(255) NULL DEFAULT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE `postalAddress` (
 -- ---
 
 DROP TABLE IF EXISTS `emailAddress`;
-    
+
 CREATE TABLE `emailAddress` (
   `userAddressID` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `email` VARCHAR(200) NOT NULL DEFAULT 'NULL',
@@ -43,7 +43,7 @@ CREATE TABLE `emailAddress` (
 -- ---
 
 DROP TABLE IF EXISTS `user`;
-    
+
 CREATE TABLE `user` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `password_hash` CHAR(32) NULL DEFAULT NULL,
@@ -57,10 +57,13 @@ CREATE TABLE `user` (
 -- ---
 
 DROP TABLE IF EXISTS `game`;
-    
+
 CREATE TABLE `game` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `name` VARCHAR(255) NULL DEFAULT NULL,
+  `releaseDate` DATE NULL DEFAULT NULL,
+  `suggestedRetailPrice` DECIMAL NULL DEFAULT NULL,
+  `platformID` INTEGER NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -70,7 +73,7 @@ CREATE TABLE `game` (
 -- ---
 
 DROP TABLE IF EXISTS `userAddress`;
-    
+
 CREATE TABLE `userAddress` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `userID` INTEGER NULL DEFAULT NULL,
@@ -87,7 +90,7 @@ CREATE TABLE `userAddress` (
 -- ---
 
 DROP TABLE IF EXISTS `order`;
-    
+
 CREATE TABLE `order` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `billingAddress` INTEGER NULL DEFAULT NULL,
@@ -102,7 +105,7 @@ CREATE TABLE `order` (
 -- ---
 
 DROP TABLE IF EXISTS `orderItem`;
-    
+
 CREATE TABLE `orderItem` (
   `gameID` INTEGER NULL DEFAULT NULL,
   `orderID` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
@@ -117,26 +120,11 @@ CREATE TABLE `orderItem` (
 -- ---
 
 DROP TABLE IF EXISTS `platform`;
-    
+
 CREATE TABLE `platform` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `name` VARCHAR(30) NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-);
-
--- ---
--- Table 'gamePlatform'
--- 
--- ---
-
-DROP TABLE IF EXISTS `gamePlatform`;
-    
-CREATE TABLE `gamePlatform` (
-  `gameID` INTEGER NULL DEFAULT NULL,
-  `platformID` INTEGER NULL DEFAULT NULL,
-  `suggestedRetailPrice` DECIMAL NULL DEFAULT NULL,
-  `releaseDate` DATE NULL DEFAULT NULL,
-  PRIMARY KEY (`gameID`, `platformID`)
 );
 
 -- ---
@@ -145,7 +133,7 @@ CREATE TABLE `gamePlatform` (
 -- ---
 
 DROP TABLE IF EXISTS `category`;
-    
+
 CREATE TABLE `category` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `name` VARCHAR(30) NULL DEFAULT NULL,
@@ -158,7 +146,7 @@ CREATE TABLE `category` (
 -- ---
 
 DROP TABLE IF EXISTS `gameCategory`;
-    
+
 CREATE TABLE `gameCategory` (
   `gameID` INTEGER NULL DEFAULT NULL,
   `categoryID` INTEGER NULL DEFAULT NULL,
@@ -171,7 +159,7 @@ CREATE TABLE `gameCategory` (
 -- ---
 
 DROP TABLE IF EXISTS `profile`;
-    
+
 CREATE TABLE `profile` (
   `userID` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `displayName` VARCHAR(30) NULL DEFAULT NULL,
@@ -188,7 +176,7 @@ CREATE TABLE `profile` (
 -- ---
 
 DROP TABLE IF EXISTS `billing`;
-    
+
 CREATE TABLE `billing` (
   `swipeEmail` INTEGER NULL DEFAULT NULL,
   `userID` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
@@ -202,10 +190,10 @@ CREATE TABLE `billing` (
 -- ---
 
 DROP TABLE IF EXISTS `friendship`;
-    
+
 CREATE TABLE `friendship` (
-  `frendeeID` INTEGER NULL DEFAULT NULL,
-  `frenderID` INTEGER NULL DEFAULT NULL,
+  `friendeeID` INTEGER NULL DEFAULT NULL,
+  `frienderID` INTEGER NULL DEFAULT NULL,
   `isFamilyMember` BINARY NULL DEFAULT NULL,
   `comments` VARCHAR(2000) NULL DEFAULT NULL,
   PRIMARY KEY ()
@@ -217,17 +205,16 @@ CREATE TABLE `friendship` (
 -- ---
 
 DROP TABLE IF EXISTS `review`;
-    
+
 CREATE TABLE `review` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `gameID` INTEGER NULL DEFAULT NULL,
   `userID` INTEGER NULL DEFAULT NULL,
-  `platformID` INTEGER NULL DEFAULT NULL,
   `subject` VARCHAR(300) NULL DEFAULT NULL,
   `body` VARCHAR NULL DEFAULT NULL,
   `dateCreated` DATE NULL DEFAULT NULL,
-  `dateModified` DATE NULL DEFAULT NULL,
   `dateDeleted` DATE NULL DEFAULT NULL,
+  `dateVerified` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -237,6 +224,7 @@ CREATE TABLE `review` (
 
 ALTER TABLE `user` ADD FOREIGN KEY (id) REFERENCES `profile` (`userID`);
 ALTER TABLE `user` ADD FOREIGN KEY (id) REFERENCES `billing` (`userID`);
+ALTER TABLE `game` ADD FOREIGN KEY (platformID) REFERENCES `platform` (`id`);
 ALTER TABLE `userAddress` ADD FOREIGN KEY (id) REFERENCES `emailAddress` (`userAddressID`);
 ALTER TABLE `userAddress` ADD FOREIGN KEY (id) REFERENCES `postalAddress` (`userAddressID`);
 ALTER TABLE `userAddress` ADD FOREIGN KEY (userID) REFERENCES `user` (`id`);
@@ -245,16 +233,13 @@ ALTER TABLE `order` ADD FOREIGN KEY (shippingAddress) REFERENCES `userAddress` (
 ALTER TABLE `order` ADD FOREIGN KEY (userID) REFERENCES `user` (`id`);
 ALTER TABLE `orderItem` ADD FOREIGN KEY (gameID) REFERENCES `game` (`id`);
 ALTER TABLE `orderItem` ADD FOREIGN KEY (orderID) REFERENCES `order` (`id`);
-ALTER TABLE `gamePlatform` ADD FOREIGN KEY (gameID) REFERENCES `game` (`id`);
-ALTER TABLE `gamePlatform` ADD FOREIGN KEY (platformID) REFERENCES `platform` (`id`);
 ALTER TABLE `gameCategory` ADD FOREIGN KEY (gameID) REFERENCES `game` (`id`);
 ALTER TABLE `gameCategory` ADD FOREIGN KEY (categoryID) REFERENCES `category` (`id`);
 ALTER TABLE `billing` ADD FOREIGN KEY (swipeEmail) REFERENCES `userAddress` (`id`);
-ALTER TABLE `friendship` ADD FOREIGN KEY (frendeeID) REFERENCES `user` (`id`);
-ALTER TABLE `friendship` ADD FOREIGN KEY (frenderID) REFERENCES `user` (`id`);
+ALTER TABLE `friendship` ADD FOREIGN KEY (friendeeID) REFERENCES `user` (`id`);
+ALTER TABLE `friendship` ADD FOREIGN KEY (frienderID) REFERENCES `user` (`id`);
 ALTER TABLE `review` ADD FOREIGN KEY (gameID) REFERENCES `game` (`id`);
 ALTER TABLE `review` ADD FOREIGN KEY (userID) REFERENCES `user` (`id`);
-ALTER TABLE `review` ADD FOREIGN KEY (platformID) REFERENCES `platform` (`id`);
 
 -- ---
 -- Table Properties
@@ -268,7 +253,6 @@ ALTER TABLE `review` ADD FOREIGN KEY (platformID) REFERENCES `platform` (`id`);
 -- ALTER TABLE `order` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `orderItem` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `platform` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
--- ALTER TABLE `gamePlatform` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `category` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `gameCategory` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `profile` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -286,8 +270,8 @@ ALTER TABLE `review` ADD FOREIGN KEY (platformID) REFERENCES `platform` (`id`);
 -- ('','','');
 -- INSERT INTO `user` (`id`,`password_hash`,`hash_salt`) VALUES
 -- ('','','');
--- INSERT INTO `game` (`id`,`name`) VALUES
--- ('','');
+-- INSERT INTO `game` (`id`,`name`,`releaseDate`,`suggestedRetailPrice`,`platformID`) VALUES
+-- ('','','','','');
 -- INSERT INTO `userAddress` (`id`,`userID`,`dateCreated`,`dateDeleted`,`dateVerified`,`allowMarketing`) VALUES
 -- ('','','','','','');
 -- INSERT INTO `order` (`id`,`billingAddress`,`shippingAddress`,`userID`) VALUES
@@ -296,8 +280,6 @@ ALTER TABLE `review` ADD FOREIGN KEY (platformID) REFERENCES `platform` (`id`);
 -- ('','','','');
 -- INSERT INTO `platform` (`id`,`name`) VALUES
 -- ('','');
--- INSERT INTO `gamePlatform` (`gameID`,`platformID`,`suggestedRetailPrice`,`releaseDate`) VALUES
--- ('','','','');
 -- INSERT INTO `category` (`id`,`name`) VALUES
 -- ('','');
 -- INSERT INTO `gameCategory` (`gameID`,`categoryID`) VALUES
@@ -306,7 +288,7 @@ ALTER TABLE `review` ADD FOREIGN KEY (platformID) REFERENCES `platform` (`id`);
 -- ('','','','','','');
 -- INSERT INTO `billing` (`swipeEmail`,`userID`,`swipeID`) VALUES
 -- ('','','');
--- INSERT INTO `friendship` (`frendeeID`,`frenderID`,`isFamilyMember`,`comments`) VALUES
+-- INSERT INTO `friendship` (`friendeeID`,`frienderID`,`isFamilyMember`,`comments`) VALUES
 -- ('','','','');
--- INSERT INTO `review` (`id`,`gameID`,`userID`,`platformID`,`subject`,`body`,`dateCreated`,`dateModified`,`dateDeleted`) VALUES
--- ('','','','','','','','','');
+-- INSERT INTO `review` (`id`,`gameID`,`userID`,`subject`,`body`,`dateCreated`,`dateDeleted`,`dateVerified`) VALUES
+-- ('','','','','','','','');
