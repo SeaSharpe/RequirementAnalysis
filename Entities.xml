@@ -37,15 +37,16 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="193" y="144" name="postalAddress">
-<row name="userAddressID" null="1" autoincrement="1">
+</datatypes><table x="352" y="43" name="address">
+<row name="id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="addressLine1" null="1" autoincrement="0">
-<datatype>VARCHAR(255)</datatype>
-<default>NULL</default></row>
-<row name="addressLine2" null="1" autoincrement="0">
-<datatype>VARCHAR(255)</datatype>
+<row name="userID" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="user" row="id" />
+</row>
+<row name="address" null="1" autoincrement="0">
+<datatype>VARCHAR(512)</datatype>
 <default>NULL</default></row>
 <row name="city" null="1" autoincrement="0">
 <datatype>VARCHAR(255)</datatype>
@@ -60,29 +61,32 @@
 <datatype>VARCHAR(255)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
-<part>userAddressID</part>
+<part>id</part>
 </key>
 </table>
-<table x="194" y="39" name="emailAddress">
-<row name="userAddressID" null="1" autoincrement="1">
+<table x="352" y="610" name="emailPreferences">
+<row name="userID" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
+<default>NULL</default><relation table="user" row="id" />
+</row>
+<row name="verified" null="1" autoincrement="0">
+<datatype>CHAR(1)</datatype>
 <default>NULL</default></row>
-<row name="email" null="0" autoincrement="0">
-<datatype>VARCHAR(200)</datatype>
-<default>'NULL'</default></row>
+<row name="allowMarketingBool" null="1" autoincrement="0">
+<datatype>CHAR(1)</datatype>
+<default>NULL</default></row>
 <row name="verificationKey" null="1" autoincrement="0">
 <datatype>CHAR(32)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
-<part>userAddressID</part>
-<part>email</part>
+<part>userID</part>
 </key>
 </table>
-<table x="452" y="252" name="user">
+<table x="624" y="327" name="user">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="profile" row="userID" />
-<relation table="billing" row="userID" />
+<relation table="billingProfile" row="userID" />
 </row>
 <row name="password_hash" null="1" autoincrement="0">
 <datatype>CHAR(32)</datatype>
@@ -90,11 +94,14 @@
 <row name="hash_salt" null="1" autoincrement="0">
 <datatype>CHAR(4)</datatype>
 <default>NULL</default></row>
+<row name="email" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="665" y="37" name="game">
+<table x="1223" y="312" name="game">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -115,43 +122,17 @@
 <part>id</part>
 </key>
 </table>
-<table x="453" y="62" name="userAddress">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="emailAddress" row="userAddressID" />
-<relation table="postalAddress" row="userAddressID" />
-</row>
-<row name="userID" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="user" row="id" />
-</row>
-<row name="dateCreated" null="1" autoincrement="0">
-<datatype>DATE</datatype>
-<default>NULL</default></row>
-<row name="dateDeleted" null="1" autoincrement="0">
-<datatype>DATE</datatype>
-<default>NULL</default></row>
-<row name="dateVerified" null="1" autoincrement="0">
-<datatype>DATE</datatype>
-<default>NULL</default></row>
-<row name="allowMarketing" null="1" autoincrement="0">
-<datatype>BINARY</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="668" y="391" name="order">
+<table x="952" y="193" name="order">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="billingAddress" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="userAddress" row="id" />
+<default>NULL</default><relation table="address" row="id" />
 </row>
 <row name="shippingAddress" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="userAddress" row="id" />
+<default>NULL</default><relation table="address" row="id" />
 </row>
 <row name="userID" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -162,7 +143,7 @@
 </key>
 <comment>Before complete this is the "Cart", after complete this is your order history.</comment>
 </table>
-<table x="827" y="389" name="orderItem">
+<table x="952" y="66" name="orderItem">
 <row name="gameID" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="game" row="id" />
@@ -182,7 +163,7 @@
 <part>gameID</part>
 </key>
 </table>
-<table x="833" y="152" name="platform">
+<table x="1467" y="495" name="platform">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -193,7 +174,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1020" y="234" name="category">
+<table x="1464" y="328" name="category">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -204,7 +185,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="829" y="233" name="gameCategory">
+<table x="1425" y="247" name="gameCategory">
 <row name="gameID" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="game" row="id" />
@@ -218,7 +199,7 @@
 <part>categoryID</part>
 </key>
 </table>
-<table x="453" y="365" name="profile">
+<table x="606" y="572" name="profile">
 <row name="userID" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -241,22 +222,21 @@
 <part>userID</part>
 </key>
 </table>
-<table x="247" y="339" name="billing">
-<row name="swipeEmail" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="userAddress" row="id" />
-</row>
+<table x="353" y="502" name="billingProfile">
 <row name="userID" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="swipeID" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
+<row name="stripeEmail" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="stripeID" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>userID</part>
 </key>
 </table>
-<table x="248" y="442" name="friendship">
+<table x="343" y="337" name="friendship">
 <row name="friendeeID" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="user" row="id" />
@@ -265,16 +245,15 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="user" row="id" />
 </row>
-<row name="isFamilyMember" null="1" autoincrement="0">
-<datatype>BINARY</datatype>
-<default>NULL</default></row>
-<row name="comments" null="1" autoincrement="0">
-<datatype>VARCHAR(2000)</datatype>
+<row name="familyMemberBool" null="1" autoincrement="0">
+<datatype>CHAR(1)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
+<part>friendeeID</part>
+<part>frienderID</part>
 </key>
 </table>
-<table x="666" y="179" name="review">
+<table x="941" y="495" name="review">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -286,20 +265,14 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="user" row="id" />
 </row>
-<row name="subject" null="1" autoincrement="0">
+<row name="rating" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="subjectText" null="1" autoincrement="0">
 <datatype>VARCHAR(300)</datatype>
 <default>NULL</default></row>
-<row name="body" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="dateCreated" null="1" autoincrement="0">
-<datatype>DATE</datatype>
-<default>NULL</default></row>
-<row name="dateDeleted" null="1" autoincrement="0">
-<datatype>DATE</datatype>
-<default>NULL</default></row>
-<row name="dateVerified" null="1" autoincrement="0">
-<datatype>DATE</datatype>
+<row name="contentText" null="1" autoincrement="0">
+<datatype>VARCHAR(2000)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>

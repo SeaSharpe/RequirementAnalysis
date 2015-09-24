@@ -1,5 +1,34 @@
-Entities List [XML](./Entities.xml) [SQL](./Entities.sql)
--------------------------
+# Entities List [XML](./Entities.xml) [SQL](./Entities.sql)
+
+## Entities
+1. Address
+ - Street Address
+ - City
+ - Province / State / Region
+ - Country
+ - Postal Code
+2. User
+ - Password
+ - Email
+    - Verification key (for validating)
+    - Was it verified? 
+    - Allows marketing?
+ - Display Name
+ - Gender
+ - Full Name
+ - Date of Birth
+ - Friends
+3. Credit Card
+ - CVV
+ - Expiration
+4. Game
+ - Category
+ - Platform
+5. Order
+ - Games
+
+## Relationships
+A relational table using these entities might look something like this
 
 ![Entities](./Entities.png)
 
