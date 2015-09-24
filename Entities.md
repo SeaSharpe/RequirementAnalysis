@@ -28,7 +28,7 @@
  - Games
 
 ## Relationships
-A relational table using these entities might look something like this
+A relational database using these entities might look something like this
 
 ![Entities](./Entities.png)
 
