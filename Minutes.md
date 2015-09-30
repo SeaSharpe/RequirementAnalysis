@@ -69,4 +69,4 @@ All members present.
 - Deployment Diagram
   - Manny
   
-** Next Meeting: October 7th **
+**Next Meeting: October 7th**
