@@ -38,3 +38,35 @@ All members present.
 We will strive to have drafts for all sections of the Analysis Requirements complete by September 30th, so we can make changes and have complete for October 7th.
 
 **Next Meeting: September 30th**
+
+## September 30, 2015
+All members present.
+
+### Review
+- Looked over deliverables for:
+  - class-diagram
+  - system sequence diagrams
+  
+### Moving Forward
+- Use case descriptions to be updated to reflect changes to use case diagram
+- Activity diagrams are underway
+- System sequence diagrams started, John to assist Manny on their completion
+- Aiming to have deliverables complete for next Wednesday (Oct. 7th) for review before hand in on Friday (Oct. 9th)
+
+### Next Phase - Design
+- ERD
+  - John
+- Design-Level Class Diagram
+  - Peter
+- UI Prototypes
+  - Nicole
+- Navigation Diagram
+  - Steve
+- Report Designs (6+)
+  - Rob
+- Data Dictionary
+  - Dan
+- Deployment Diagram
+  - Manny
+  
+** Next Meeting: October 7th **
