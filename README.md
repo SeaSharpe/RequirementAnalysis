@@ -1,8 +1,10 @@
 # Sea Sharp Requirement Analysis Documents
-## [User Stories](./User Stories.md)
-A description should go here.
-## [Work in Progress](./workInProgress.md)
-A description should go here.
+## [Analysis Level Class Diagram](./AnalysisLevelClassDiagram.md)
 ## [Entities](./Entities.md)
 A list of entities
-##[Analysis Level Class Diagram](./AnalysisLevelClassDiagram.md)
+## [Minutes](./Minutes.md)
+The minutes of meetings held during the Requirement Analysis Phase
+## [Use Cases](./User Stories.md)
+Contains the use case diagram and use case descriptions
+## [User Stories](./User Stories.md)
+## [Work in Progress](./workInProgress.md)
