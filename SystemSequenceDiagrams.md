@@ -66,7 +66,7 @@
 ### View game reviews
 ![Missing Diagram](./SSD/)
 ### Review games
-![Missing Diagram](./SSD/)
+![Review games](./SSD/Reviewgames.jpg)
 ### Rate games
 ![Missing Diagram](./SSD/)
 ### Add friends and family to account
@@ -103,8 +103,8 @@
 ### Mark Order As Processed
 ![Missing Diagram](./SSD/)
 ### Approve Reviews
-![Missing Diagram](./SSD/)
+![Approve Reviews](./SSD/ApproveReviews.jpg)
 ### View Reports
-![Missing Diagram](./SSD/)
+![View Reports](./SSD/ViewReports.jpg)
 ### Print Reports
-![Missing Diagram](./SSD/)
+![Print Reports](./SSD/PrintReports.jpg)

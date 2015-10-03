@@ -1192,7 +1192,7 @@
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">Template</td>
+    <td colspan="2">Add Event</td>
   </tr>
   <tr>
     <th>Description</th>
@@ -1380,7 +1380,7 @@
   <tr>
     <th>Alternate Flow(s)</th>
     <td colspan="2">
-      1.1 System doesn't return a game form for the user to fill out.<br>
+      2.1 System doesn't return a game form for the user to fill out.<br>
       4.1 System does not update the database, message returned to user is: “Game not Added”
     </td>
   </tr>
@@ -1610,7 +1610,7 @@
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">Template</td>
+    <td colspan="2">Approve Reviews</td>
   </tr>
   <tr>
     <th>Description</th>
