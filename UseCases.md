@@ -44,8 +44,6 @@
 ![Employees Diagram](./UseCases2.png)
 
 ## Users / Visitors
-![Users and Visitors Diagram](./UseCases1.png)
-
 ### Sign up for account
 <table>
   <tr>
@@ -1186,8 +1184,6 @@
 </table>
 
 ## Employees
-![Employees Diagram](./UseCases2.png)
-
 ### Add Event
 <table>
   <tr>
@@ -1225,7 +1221,7 @@
     <th>Alternate Flow(s)</th>
     <td colspan="2">
       1.1 System doesn't return an event form for the user to fill out.<br>
-      4.1 System does not update the database, message returned to user is: “Event not Added”
+      4.1 System does not update the database, message returned to user is: &ldquo;Event not Added&rdquo;
     </td>
   </tr>
   <tr>
@@ -1278,7 +1274,7 @@
     <td colspan="2">
       2.1 System doesn't return a list of events<br>
       4.1 System doesn't return the selected event.<br>
-      6.1 System does not update the database, message returned to user is: “Event not Updated”
+      6.1 System does not update the database, message returned to user is: &ldquo;Event not Updated&rdquo;
     </td>
   </tr>
   <tr>
@@ -1322,7 +1318,7 @@
     </td>
     <td>
       2.  System returns a list of events.<br>
-      4.  System returns “Are you sure you wish to delete this event?”<br>
+      4.  System returns &ldquo;Are you sure you wish to delete this event?&rdquo;<br>
       6.  System deletes the event and updates the database and returns a message &ldquo;Successfully Deleted Event&rdquo; to the user.  The system then returns the Employee to their Home Screen
     </td>
   </tr>
@@ -1331,7 +1327,7 @@
     <td colspan="2">
       2.1 System doesn't return a list of events<br>
       4.1 System doesn't delete the selected event.<br>
-      6.1 System does not update the database, message returned to user is: “Event not Deleted”
+      6.1 System does not update the database, message returned to user is: &ldquo;Event not Deleted&rdquo;
     </td>
   </tr>
   <tr>
@@ -1381,7 +1377,7 @@
     <th>Alternate Flow(s)</th>
     <td colspan="2">
       2.1 System doesn't return a game form for the user to fill out.<br>
-      4.1 System does not update the database, message returned to user is: “Game not Added”
+      4.1 System does not update the database, message returned to user is: &ldquo;Game not Added&rdquo;
     </td>
   </tr>
   <tr>
@@ -1434,7 +1430,7 @@
     <td colspan="2">
       2.1 System doesn't return a list of games<br>
       4.1 System doesn't return the selected game.<br>
-      6.1 System does not update the database, message returned to user is: “Game not Updated”
+      6.1 System does not update the database, message returned to user is: &ldquo;Game not Updated&rdquo;
     </td>
   </tr>
   <tr>
@@ -1478,7 +1474,7 @@
     </td>
     <td>
       2.  System returns a list of games.<br>
-      4.  System returns “Are you sure you wish to delete this game?”<br>
+      4.  System returns &ldquo;Are you sure you wish to delete this game?&rdquo;<br>
       6.  System deletes the game and updates the database and returns a message &ldquo;Successfully Deleted Game to the user.  The system then returns the Employee to their Home Screen
     </td>
   </tr>
@@ -1487,7 +1483,7 @@
     <td colspan="2">
       2.4 System doesn't return a list of games<br>
       4.1 System doesn't delete the selected game.<br>
-      6.1 System does not update the database, message returned to user is: “Game not Deleted”
+      6.1 System does not update the database, message returned to user is: &ldquo;Game not Deleted&rdquo;
     </td>
   </tr>
   <tr>
@@ -1525,14 +1521,14 @@
   </tr>
   <tr>
     <td>
-      1.  Employee clicks &ldquo;Post Game button<br>
+      1.  Employee clicks &ldquo;Post Game button&rdquo;<br>
       3.  Employee selects a game to post to the web site<br>
       5.  Employee selects YES
     </td>
     <td>
       2.  System returns a list of available games.<br>
-      4.  System returns “Are you sure you wish to post this game?”<br>
-      6.  System deletes the game and updates the database and returns a message &ldquo;Successfully Posted Game to the website.  The system then returns the Employee to their Home Screen
+      4.  System returns &ldquo;Are you sure you wish to post this game?&rdquo;<br>
+      6.  System creates the game, updates the database and returns a message &ldquo;Successfully Posted Game&rdquo; to the website.  The system then returns the Employee to their Home Screen
     </td>
   </tr>
   <tr>
@@ -1540,7 +1536,7 @@
     <td colspan="2">
       2.1 System doesn't return a list of games<br>
       4.1 System doesn't ask if the employee wishes to post the game.<br>
-      6.1 System does not post the game,  message returned to user is: “Game not posted”
+      6.1 System does not create the game, message returned to user is: &ldquo;Game not posted&rdquo;
     </td>
   </tr>
   <tr>
@@ -1584,7 +1580,7 @@
     </td>
     <td>
       2.  System returns a list of unprocessed orders.<br>
-      4.  System returns “Are you sure you wish to process this order?”<br>
+      4.  System returns &ldquo;Are you sure you wish to process this order?&rdquo;<br>
       6.  System processes the order and returns a message &ldquo;Successfully Processed Order to the website.  The system then returns the Employee to their Home Screen
     </td>
   </tr>
@@ -1593,7 +1589,7 @@
     <td colspan="2">
       2.1 System doesn't return a list of unprocessed orders.<br>
       4.1 System doesn't ask if the employee wishes to process the order.<br>
-      6.1 System does not process the order,  message returned to user is: “Selected order not processed”
+      6.1 System does not process the order,  message returned to user is: &ldquo;Selected order not processed&rdquo;
     </td>
   </tr>
   <tr>
@@ -1642,8 +1638,8 @@
   <tr>
     <th>Alternate Flow(s)</th>
     <td colspan="2">
-      1.1 System doesn't return a list of unapproved reviews.<br>
-      4.1 System does not update the database, message returned to user is: “Review not Approved”
+      2.1 System doesn't return a list of unapproved reviews.<br>
+      4.1 System does not update the database, message returned to user is: &ldquo;Review not Approved&rdquo;
    </td>
   </tr>
   <tr>

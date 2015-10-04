@@ -80,28 +80,28 @@
 ### User Checkout
 ![Missing Diagram](./SSD/)
 ### Add game to cart
-![Missing Diagram](./SSD/)
+![Add game to cart](./SSD/AddGameToCart.jpg)
 ### Display game details
-![Missing Diagram](./SSD/)
+![Display game details](./SSD/DisplayGameDetails.jpg)
 ### Search for games
-![Missing Diagram](./SSD/)
+![Search for games](./SSD/SearchForGames.jpg)
 ## Employees
 ### Add Event
-![Missing Diagram](./SSD/)
+![Add Event](./SSD/AddEvent.jpg)
 ### Edit Event
-![Missing Diagram](./SSD/)
+![Edit Event](./SSD/EditEvent.jpg)
 ### Delete Event
-![Missing Diagram](./SSD/)
+![Delete Event](./SSD/DeleteEvent.jpg)
 ### Add Game
-![Missing Diagram](./SSD/)
+![Add Game](./SSD/AddGame.jpg)
 ### Edit Game
-![Missing Diagram](./SSD/)
+![Edit Game](./SSD/EditGame.jpg)
 ### Delete Game
-![Missing Diagram](./SSD/)
+![Delete Game](./SSD/DeleteGame.jpg)
 ### Post Games
-![Missing Diagram](./SSD/)
+![Post Games](./SSD/PostGames.jpg)
 ### Mark Order As Processed
-![Missing Diagram](./SSD/)
+![Mark Order As Processed](./SSD/MarkOrderAsProcessed.jpg)
 ### Approve Reviews
 ![Approve Reviews](./SSD/ApproveReviews.jpg)
 ### View Reports
