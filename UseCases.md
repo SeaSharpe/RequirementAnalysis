@@ -578,15 +578,15 @@
     </td>
     <td>
       2. Systems returns page of events<br>
-      4. System returns a page of details about selected event.
+      4. System returns a page of details about selected event.<br>
+      6. System returns Events list
     </td>
   </tr>
   <tr>
     <th>Alternate Flow(s)</th>
     <td colspan="2">
-      5.1 Visitor is  not logged in and is prompted to ethier login or register an account.<br>
-      5.2 User decides they are not interested. Clicks &ldquo;Return to Events&rdquo;<br>
-      6.1 System returns Events list
+      2.1 Visitor is not logged in and is prompted to ethier login or register an account.<br>
+      4.1 User decides they are not interested. Clicks &ldquo;Return to Events&rdquo;
     </td>
   </tr>
   <tr>
@@ -966,7 +966,7 @@
     <td>
       1. User browses free games. User finds a game that interests them and selects it.<br>
       3. User has option to download game. User clicks &ldquo;Download&rdquo;<br>
-      4. User is able to install and play game 
+      5. User is able to install and play game 
     </td>
     <td>
       2. System returns a page of details about game.<br>
