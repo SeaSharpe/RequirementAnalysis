@@ -580,7 +580,7 @@
     <td>
       2. System returns page of events<br>
       4. System returns a page of details about selected event.<br>
-	    6. System returns a message to user prompting them to either sign on to the site or register to join an event
+      6. System returns a message to user prompting them to either sign on to the site or register to join an event
     </td>
   </tr>
   <tr>
@@ -1019,7 +1019,7 @@
     <td>
       1. User browses free games. User finds a game that interests them and selects it.<br>
       3. User has option to download game. User clicks &ldquo;Download&rdquo;<br>
-      4. User is able to install and play game 
+      5. User is able to install and play game 
     </td>
     <td>
       2. System returns a page of details about game.<br>
