@@ -13,7 +13,8 @@
   1. [Add or Modify a shipping address](#add-or-modify-a-shipping-address)
   1. [Delete a shipping address](#delete-a-shipping-address)
   1. [Reset user password](#reset-user-password)
-  1. [User/Visitor searches for an event](#uservisitor-searches-for-an-event)
+  1. [Visitor searches for an event](#visitor-searches-for-an-event)
+  1. [User searches for an event](#user-searches-for-an-event)
   1. [Register for an event](#register-for-an-event)
   1. [View game reviews](#view-game-reviews)
   1. [Review games](#review-games)
@@ -547,23 +548,23 @@
   </tr>
 </table>
 
-### User/Visitor searches for an event
+### Visitor searches for an event
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">User/Visitor searches for an event</td>
+    <td colspan="2">Visitor searches for an event</td>
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">User/Visitor searches for an event through the website.</td>
+    <td colspan="2">Visitor searches for an event through the website</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User/Visitor</td>
+    <td colspan="2">Visitor</td>
   </tr>
   <tr>
     <th>Preconditions</th>
-    <td colspan="2">User is logged in to their CVGS account</td>
+    <td colspan="2">Visitor is on the CVGS website</td>
   </tr>
   <tr>
     <th rowspan="2">Basic Flow of Events</th>
@@ -572,26 +573,78 @@
   </tr>
   <tr>
     <td>
-      1. User/Visitor clicks on the &ldquo;Events&rdquo; tab of the site<br>
-      3. User/Visitor browses or searches through a list of events and finds an event they are interested in and clicks the event<br>
-      5. User/Visitor reads through detail and decides to participate in event. Clicks &ldquo;Join&rdquo;
+      1. Visitor clicks on the “Events” tab of the site<br>
+      3. Visitor browses or searches through events to find an interesting one and clicks on it.<br>
+      5. Visitor reads through detail and decides to participate in event. Clicks &ldquo;Join&rdquo;
     </td>
     <td>
-      2. Systems returns page of events<br>
+      2. System returns page of events<br>
       4. System returns a page of details about selected event.<br>
-      6. System returns Events list
+	    6. System returns a message to user prompting them to either sign on to the site or register to join an event
     </td>
   </tr>
   <tr>
     <th>Alternate Flow(s)</th>
     <td colspan="2">
-      2.1 Visitor is not logged in and is prompted to ethier login or register an account.<br>
-      4.1 User decides they are not interested. Clicks &ldquo;Return to Events&rdquo;
+      5.1 Visitor is  not logged in and is prompted to ethier login or register an account.<br>
+      5.2 User decides they are not interested. Clicks &ldquo;Return to Events&rdquo;<br>
     </td>
   </tr>
   <tr>
     <th>Success Guarantee</th>
-    <td colspan="2">User/Visitor is able to search for events listed on site</td>
+    <td colspan="2">Visitor is able to search for events listed on site</td>
+  </tr>
+  <tr>
+    <th>Minimum Guarantee</th>
+    <td colspan="2">Visitor can retry the event search</td>
+  </tr>
+</table>
+
+### User searches for an event
+<table>
+  <tr>
+    <th width="20%">Use Case Name</th>
+    <td colspan="2">User searches for an event</td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td colspan="2">User searches for an event through the website</td>
+  </tr>
+  <tr>
+    <th>Actor(s)</th>
+    <td colspan="2">User</td>
+  </tr>
+  <tr>
+    <th>Preconditions</th>
+    <td colspan="2">User is logged on to the CVGS website</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Basic Flow of Events</th>
+    <th width="35%">Actor</th>
+    <th width="35%">System</th>
+  </tr>
+  <tr>
+    <td>
+      1. User clicks on the “Events” tab of the site<br>
+      3. User browses or searches through events to find an interesting one and clicks on it.<br>
+      5. User reads through detail and decides to participate in event. Clicks &ldquo;Join&rdquo;
+    </td>
+    <td>
+      2. System returns page of events<br>
+      4. System returns a page of details about selected event.<br>
+	    6. System returns a message to user confirming they are registered for event.
+    </td>
+  </tr>
+  <tr>
+    <th>Alternate Flow(s)</th>
+    <td colspan="2">
+      5.1 User is  not logged in and is prompted to ethier login or register an account.<br>
+      5.2 User decides they are not interested. Clicks &ldquo;Return to Events&rdquo;<br>
+    </td>
+  </tr>
+  <tr>
+    <th>Success Guarantee</th>
+    <td colspan="2">User is able to search for events listed on site</td>
   </tr>
   <tr>
     <th>Minimum Guarantee</th>
@@ -966,7 +1019,7 @@
     <td>
       1. User browses free games. User finds a game that interests them and selects it.<br>
       3. User has option to download game. User clicks &ldquo;Download&rdquo;<br>
-      5. User is able to install and play game 
+      4. User is able to install and play game 
     </td>
     <td>
       2. System returns a page of details about game.<br>
