@@ -11,7 +11,7 @@ As a Visitor, I can browse the entirety of the games available on the website or
 
 As a Visitor, I can view the details of a game by navigating to a game's descriptive page.
 
-As a Visitor, I can view reviews for games on it's descriptive page.
+As a Visitor, I can view reviews and ratings for games on it's descriptive page.
 
 As a Visitor, I can view events.
 
@@ -36,11 +36,13 @@ As a Member, I can set my game category preferences from my profile.
 
 As a Member, I can set my platform preferences from my profile.
 
-As a Member, I can set my shipping address from my profile.
+As a Member, I can set/edit/delete my shipping address from my profile.
 
 As a Member, I can change my password from my profile.
 
 As a Member, I can add to and remove games from my wishlist.
+
+As a Member, I can register a credit card.
 
 #####	Events Stories
 
@@ -70,9 +72,20 @@ As a Member, I can submit ratings for games from its descriptive page.
 
 As a Member, I can pay for games using credit card or paypal
 
+As a Member, I can add games to my cart.
+
+As a Member, I can checkout.
+
 ### Employee User Stories
 
+As an Employee, I can login to the site.
+
 As an Employee, I can approve Member reviews of games.
+
+As an Employee, I can ship games for an order.
+
+As an Employee, I can mark orders as processed.
+
 
 #####   Adding a game
 
