@@ -23,7 +23,6 @@
  - Friends
  - Stripe Email
  - Stripe ID
- - verification key
 3. Credit Card
  - Number
  - CVV
