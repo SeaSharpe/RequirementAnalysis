@@ -1157,15 +1157,15 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">Visitor/User views the details of a game</td>
+    <td colspan="2">Visitor/Member views the details of a game</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">Visitor/User</td>
+    <td colspan="2">Visitor, Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
-    <td colspan="2">Visitor/User is at the CVGS websites.</td>
+    <td colspan="2">Visitor/Member is on the CVGS websites.</td>
   </tr>
   <tr>
     <th rowspan="2">Basic Flow of Events</th>
@@ -1174,7 +1174,7 @@
   </tr>
   <tr>
     <td>
-      1. Visitor/User selects a game from the list.
+      1. User selects a game from the list.
     </td>
     <td>
       2. System returns a page displaying the details for the game. 
@@ -1210,7 +1210,7 @@
   </tr>
   <tr>
     <th>Preconditions</th>
-    <td colspan="2">Visitor/User logged in to their CVGS account</td>
+    <td colspan="2">User is on the CVGS website.</td>
   </tr>
   <tr>
     <th rowspan="2">Basic Flow of Events</th>
@@ -1256,7 +1256,7 @@
   </tr>
   <tr>
     <th>Preconditions</th>
-    <td colspan="2">Employee is logged in to the CVGS web site.</td>
+    <td colspan="2">Employee is logged in to the CVGS web site, on the Events page.</td>
   </tr>
   <tr>
     <th rowspan="2">Basic Flow of Events</th>
@@ -1265,7 +1265,7 @@
   </tr>
   <tr>
     <td>
-      1.  Employee clicks &ldquo;Add Event&rdquo; button<br>
+      1.  Employee clicks &ldquo;Add Event&rdquo; link<br>
       3.  Employee clicks &ldquo;Submit data&rdquo;
     </td>
     <td>
@@ -1298,7 +1298,7 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">The employee edits an event to the web site.</td>
+    <td colspan="2">Employee edits an event on the web site.</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
@@ -1315,8 +1315,8 @@
   </tr>
   <tr>
     <td>
-      1.  Employee clicks &ldquo;Edit Event&rdquo; button<br>
-      3.  Employee selects an event to edit from the list<br>
+      1.  Employee clicks &ldquo;Event&rdquo; link<br>
+      3.  Employee selects an event to edit from the list and clicks &ldquo;Edit&rdquo; on that event<br>
       5.  Employee updates the event and clicks &ldquo;Submit data&rdquo;
    </td>
     <td>
@@ -1351,7 +1351,7 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">The employee delete an event from the web site.</td>
+    <td colspan="2">The employee deletes an event from the web site.</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
@@ -1368,8 +1368,8 @@
   </tr>
   <tr>
     <td>
-      1.  Employee clicks &ldquo;Delete Event&rdquo; button<br>
-      3.  Employee selects an event to delete from the list<br>
+      1.  Employee clicks &ldquo;Event&rdquo; link<br>
+      3.  Employee selects an event to delete from the list and clicks &ldquo;Delete&rdquo; on that event <br>
       5.  Employee selects YES
     </td>
     <td>
@@ -1412,7 +1412,7 @@
   </tr>
   <tr>
     <th>Preconditions</th>
-    <td colspan="2">Employee is logged in to the CVGS web site.</td>
+    <td colspan="2">Employee is logged in to the CVGS web site and is viewing the Games page.</td>
   </tr>
   <tr>
     <th rowspan="2">Basic Flow of Events</th>
@@ -1426,7 +1426,7 @@
     </td>
     <td>
       2.  System returns a form for the employee to fill out including: game name, description, category<br>
-      4.  System updates database with the new game and returns a message &ldquo;Successfully Added Game to the user.  The system then returns the Employee to their Home Screen
+      4.  System updates database with the new game and returns a message &ldquo;Successfully Added Game&rdquo; to the user.  The system then returns the Employee to their Home Screen
     </td>
   </tr>
   <tr>
@@ -1471,14 +1471,14 @@
   </tr>
   <tr>
     <td>
-      1.  Employee clicks &ldquo;Edit Game button<br>
-      3.  Employee selects a game to edit from the list<br>
-      5.  Employee updates the game and clicks &ldquo;Submit data&rdquo;
+      1.  Employee clicks &ldquo;Games&rdquo; link<br>
+      3.  Employee selects a game to edit from the list and clicks &ldquo;Edit&rdquo; on that game<br>
+      5.  Employee updates the game via the form and clicks &ldquo;Submit&rdquo;
     </td>
     <td>
       2.  System returns a list of games.<br>
-      4.  System returns the selected game.<br>
-      6.  System updates database with the new game and returns a message &ldquo;Successfully Updated Game to the user.  The system then returns the Employee to their Home Screen
+      4.  System returns a page with the selected game and a form to edit the fields.<br>
+      6.  System updates database with the new game and returns a message &ldquo;Successfully Updated Game to the user.  The           system then returns the Employee to their Home Screen
     </td>
   </tr>
   <tr>
@@ -1524,8 +1524,8 @@
   </tr>
   <tr>
     <td>
-      1.  Employee clicks &ldquo;Delete Game button<br>
-      3.  Employee selects a game to delete from the list<br>
+      1.  Employee clicks &ldquo;Games&rdquo; link<br>
+      3.  Employee selects a game to delete from the list and clicks &ldquo;Delete&rdquo; on that game<br>
       5.  Employee selects YES 
     </td>
     <td>
@@ -1538,7 +1538,7 @@
     <th>Alternate Flow(s)</th>
     <td colspan="2">
       2.4 System doesn't return a list of games<br>
-      4.1 System doesn't delete the selected game.<br>
+      4.1 System doesn't display dialogue to user.<br>
       6.1 System does not update the database, message returned to user is: &ldquo;Game not Deleted&rdquo;
     </td>
   </tr>
@@ -1584,7 +1584,7 @@
     <td>
       2.  System returns a list of available games.<br>
       4.  System returns &ldquo;Are you sure you wish to post this game?&rdquo;<br>
-      6.  System creates the game, updates the database and returns a message &ldquo;Successfully Posted Game&rdquo; to the website.  The system then returns the Employee to their Home Screen
+      6.  System creates the game, updates the database and returns a message &ldquo;Successfully Posted Game&rdquo; to the           website.  The system then returns the Employee to their Home Screen
     </td>
   </tr>
   <tr>
@@ -1637,7 +1637,7 @@
     <td>
       2.  System returns a list of unprocessed orders.<br>
       4.  System returns &ldquo;Are you sure you wish to process this order?&rdquo;<br>
-      6.  System processes the order and returns a message &ldquo;Successfully Processed Order to the website.  The system then returns the Employee to their Home Screen
+      6.  System processes the order and returns a message &ldquo;Successfully Processed Order to the website.  The system            then returns the Employee to their Home Screen
     </td>
   </tr>
   <tr>
@@ -1688,7 +1688,7 @@
    </td>
     <td>
       2.  System returns a list of unapproved reviews<br>
-      4.  System updates database to indicate that the selected review has been approved. As well, system returns a message &ldquo;Successfully approved review&rdquo; to the user.  The system then returns the Employee to their Home Screen
+      4.  System updates database to indicate that the selected review has been approved. As well, system returns a message           &ldquo;Successfully approved review&rdquo; to the user.  The system then returns the Employee to their Home Screen
    </td>
   </tr>
   <tr>
@@ -1708,15 +1708,15 @@
   </tr>
 </table>
 
-### View Reports
+### View Report
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">View Reports</td>
+    <td colspan="2">View Report</td>
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">The employee views reports.</td>
+    <td colspan="2">The employee views a report.</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
@@ -1783,8 +1783,8 @@
   </tr>
   <tr>
     <td>
-      1.  Employee clicks &ldquo;Print Reports&rdquo;<br>
-      3.  Employee selects a report to print.
+      1.  Employee clicks &ldquo;View Reports&rdquo;<br>
+      3.  Employee selects a report to prin from the list and clicks &ldquo;Print&rdquo; on that report.
    </td>
     <td>
       2.  System returns a list of available reports<br>
