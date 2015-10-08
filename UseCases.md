@@ -1784,7 +1784,7 @@
   <tr>
     <td>
       1.  Employee clicks &ldquo;View Reports&rdquo;<br>
-      3.  Employee selects a report to prin from the list and clicks &ldquo;Print&rdquo; on that report.
+      3.  Employee selects a report to print from the list and clicks &ldquo;Print&rdquo; on that report.
    </td>
     <td>
       2.  System returns a list of available reports<br>
