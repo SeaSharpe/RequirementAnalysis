@@ -2,30 +2,52 @@
 
 ## Entities
 1. Address
+ - Unit #
  - Street Address
  - City
  - Province / State / Region
  - Country
  - Postal Code
 2. User
- - Password
+ - Password(Hashed)
+ - Hash Salt
  - Email
     - Verification key (for validating)
     - Was it verified? 
     - Allows marketing?
+ - Phone Number
  - Display Name
  - Gender
  - Full Name
  - Date of Birth
  - Friends
+ - Stripe Email
+ - Stripe ID
 3. Credit Card
+ - Number
  - CVV
  - Expiration
 4. Game
+ - Name
  - Category
  - Platform
+ - Release Date
+ - Price
 5. Order
  - Games
+ - Order Date
+ - Ship Date
+6. Review
+ - Rating
+ - Subject Text
+ - Context Text
+7. Platform
+ - Name
+8. Category
+ - Name
+9. Friendship
+ - isFamilyMember
+ - isAccepted
 
 ## Relationships
 A relational database using these entities might look something like this

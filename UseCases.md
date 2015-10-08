@@ -2,28 +2,28 @@
 
 ### Table of Contents
 1. [Diagrams](#diagrams)
-1. [Users / Visitors Use Case Descriptions](#users--visitors)
+1. [Member / Visitors Use Case Descriptions](#users--visitors)
   1. [Sign up for account](#sign-up-for-account)
   1. [Login to site](#login-to-site)
   1. [Setup Profile](#setup-profile)
   1. [Opt In/Out of receiving promotional materials by email](#opt-inout-of-receiving-promotional-materials-by-email)
   1. [Set Platform Preference](#set-platform-preference)
   1. [Set game category preference](#set-game-category-preference)
-  1. [User registers a credit card](#user-registers-a-credit-card)
+  1. [Member registers a credit card](#user-registers-a-credit-card)
   1. [Add or Modify a shipping address](#add-or-modify-a-shipping-address)
   1. [Delete a shipping address](#delete-a-shipping-address)
-  1. [Reset user password](#reset-user-password)
+  1. [Reset member password](#reset-user-password)
   1. [Visitor searches for an event](#visitor-searches-for-an-event)
-  1. [User searches for an event](#user-searches-for-an-event)
+  1. [Member searches for an event](#user-searches-for-an-event)
   1. [Register for an event](#register-for-an-event)
   1. [View game reviews](#view-game-reviews)
   1. [Review games](#review-games)
   1. [Rate games](#rate-games)
   1. [Add friends and family to account](#add-friends-and-family-to-account)
-  1. [View another users wishlist](#view-another-users-wishlist)
+  1. [View another members wishlist](#view-another-users-wishlist)
   1. [Add to Wishlist](#add-to-wishlist)
-  1. [User Downloads Game](#user-downloads-game)
-  1. [User Checkout](#user-checkout)
+  1. [Member Downloads Game](#user-downloads-game)
+  1. [Member Checkout](#user-checkout)
   1. [Add game to cart](#add-game-to-cart)
   1. [Display game details](#display-game-details)
   1. [Search for games](#search-for-games)
@@ -41,10 +41,10 @@
   1. [Print Reports](#print-reports)
 
 ## Diagrams
-![Users and Visitors Diagram](./UseCases1.png)
+![Members and Visitors Diagram](./UseCases1.png)
 ![Employees Diagram](./UseCases2.png)
 
-## Users / Visitors
+## Members / Visitors
 ### Sign up for account
 <table>
   <tr>
@@ -106,7 +106,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member, Employee</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -143,15 +143,15 @@
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">Setup Profile</td>
+    <td colspan="2">Setup/Update Profile</td>
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">User can setup their profile for their account</td>
+    <td colspan="2">Member can setup or update their profile for their account</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -168,7 +168,7 @@
       3. User enters in data and clicks submit.
     </td>
     <td>
-      2. System redirects user to page where they can fill in their display name, actual name, email, gender, and birthdate.<br>
+      2. System redirects user to &ldquo;Member Profile&rdquo; page where they can fill in their display name, actual name, email, gender, and birthdate.<br>
       4. System updates database and returns message: &ldquo;Profile updated successfully&rdquo;.
     </td>
   </tr>
@@ -197,11 +197,11 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">User decides whether to receive promotional material via email.</td>
+    <td colspan="2">Member decides whether to receive promotional material via email.</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -214,16 +214,18 @@
   </tr>
   <tr>
     <td>
-      1. User goes to profile, which contains checkbox to set option
+      1. User selects &ldquo;Update Profile&rdquo;<br>
+      3. User checks/unchecks opt in check box and clicks submit
     </td>
     <td>
-      2. System returns a confirmation of setting change and updates database
+      2. System redirects user to &ldquo;Member Profile&rdquo; page, which has an opt-in checkbox<br>
+      4. System returns a confirmation of setting change and updates database
     </td>
   </tr>
   <tr>
     <th>Alternate Flow(s)</th>
     <td colspan="2">
-      2.1 State of promotional materials not changed, message that the state of promotional materials is unchanged.
+      4.1 State of promotional materials not changed, message that the state of promotional materials is unchanged.
     </td>
   </tr>
   <tr>
@@ -252,7 +254,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -265,15 +267,17 @@
   </tr>
   <tr>
     <td>
-      1. User selects their preferred platform from a list (ie desktop PC, tablet, or mobile phone)
+      1. User selects &ldquo;Update Profile&rdquo;<br>
+      3. User selects their preferred platform from a list (ie desktop PC, tablet, or mobile phone) and clicks submit
     </td>
     <td>
-      2. System stores the selected platform and returns a success message to the user.
+      2. System redirects user to &ldquo;Member Profile&rdquo; page, which has a platform preference listbox<br>
+      4. System stores the selected platform and returns a success message to the user.
     </td>
   </tr>
   <tr>
     <th>Alternate Flow(s)</th>
-    <td colspan="2">2.1 System does not store preferred platform, message to user &ldquo;preferred platform not saved&rdquo;</td>
+    <td colspan="2">4.1 System does not store preferred platform, message to user &ldquo;preferred platform not saved&rdquo;</td>
   </tr>
   <tr>
     <th>Success Guarantee</th>
@@ -297,7 +301,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -310,12 +314,12 @@
   </tr>
   <tr>
     <td>
-      1.User clicks &ldquo;Preferences&rdquo;<br>
+      1.User clicks &ldquo;Update Profile&rdquo;<br>
       3.User selects their preferred game category from the list and then clicks Submit
     </td>
     <td>
-       2. User is taken to the &ldquo;Preferences&rdquo; page<br>
-       4. System updated the preferred game category and saves to the database.<br>
+       2. User is taken to the &ldquo;Member Profile&rdquo; page<br>
+       4. System stores the selected category and returns a success message to the user<br>
        5. Return the user to the Home screen
     </td>
   </tr>
@@ -333,11 +337,11 @@
   </tr>
 </table>
 
-### User registers a credit card
+### Member registers a credit card
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">User registers a credit card</td>
+    <td colspan="2">Member registers a credit card</td>
   </tr>
   <tr>
     <th>Description</th>
@@ -345,7 +349,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -358,16 +362,16 @@
   </tr>
   <tr>
     <td>
-      1. User clicks on &ldquo;Profile&rdquo; from main page.<br>
+      1. User clicks on &ldquo;Update Profile&rdquo; from main page.<br>
       3. User selects &ldquo;Add Credit Card&rdquo;<br>
       5. User enters credit card data and clicks &ldquo;Submit&rdquo;<br>
       7. User clicks &ldquo;Confirm&rdquo;
     </td>
     <td>
-      2.System returns the profile page<br>
+      2.System returns the &ldquo;Member Profile&rdquo; page<br>
       4. System returns the page form for adding a credit card. <br>
       6. System validates details and returns confirmation message<br>
-      8. System adds credit card to database and returns user to the profile page where they may add other cards.
+      8. System adds credit card to database and returns user to the  &ldquo;Member Profile&rdquo; page where they may add 		other cards.
     </td>
   </tr>
   <tr>
@@ -399,7 +403,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -412,14 +416,14 @@
   </tr>
   <tr>
     <td>
-      1.User clicks on &ldquo;Profile&rdquo; from main page.<br>
+      1. User clicks on &ldquo;Update Profile&rdquo; from main page.<br>
       3. User selects &ldquo;Shipping Options&rdquo; <br>
       5. User clicks &ldquo;Add or Update Shipping Address&rdquo;<br>
-      7. User enters details<br>
+      7. User enters details and clicks Submit<br>
       9. User clicks &ldquo;Confirm&rdquo;
     </td>
     <td>
-      2. System returns the profile page<br>
+      2. System returns the &ldquo;Member Profile&rdquo; page<br>
       4. System returns the &ldquo;Shipping details&rdquo; page<br>
       6. System returns address entry form page<br>
       8. System validates information entered. Returns confirmation to user<br>
@@ -452,7 +456,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -465,13 +469,13 @@
   </tr>
   <tr>
     <td>
-      1. User clicks on &ldquo;Profile&rdquo; from main page.<br>
+      1. User clicks on &ldquo;Update Profile&rdquo; from main page.<br>
       3. User selects &ldquo;Shipping Options&rdquo; <br>
       5. User clicks &ldquo;Delete Shipping Address&rdquo;<br>
       7. Users confirms message box.
     </td>
     <td>
-      2. System returns the profile page<br>
+      2. System returns the &ldquo;Member Profile&rdquo; page<br>
       4. System returns the &ldquo;Shipping details&rdquo; page<br>
       6. System returns a confirmation message<br>
       8. System updates database and returns email to user confirming the change
@@ -494,11 +498,11 @@
   </tr>
 </table>
 
-### Reset user password
+### Reset member password
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">Reset user password</td>
+    <td colspan="2">Reset member password</td>
   </tr>
   <tr>
     <th>Description</th>
@@ -521,7 +525,7 @@
     <td>
       1. User forgets their password on login. Clicks &ldquo;Forgot Password&rdquo;<br>
       3. User receives email saying a password reset has been requested for the account, User clicks link within<br>
-      5. User is asked to enter a new password. Then re-enter password to make sure user has entered their desired password. 
+      5. User is asked to enter/re-enter a new password. User submits the form.
     </td>
     <td>
       2. Systems returns Email to the registered username of the account.<br>
@@ -534,7 +538,7 @@
     <td colspan="2">
       1.1 User can also change password in preferences by clicking change password.<br>
       2.1 System returns a reset page.<br>
-      3.1 User is asked to enter a new password. Then re-enter password to make sure user has entered their desired password.<br>
+      3.1 User is asked to enter/re-enter a new password. User submits the form.<br>
       4.1 System commits changes and returns user to preferences
     </td>
   </tr>
@@ -600,11 +604,11 @@
   </tr>
 </table>
 
-### User searches for an event
+### Member searches for an event
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">User searches for an event</td>
+    <td colspan="2">Member searches for an event</td>
   </tr>
   <tr>
     <th>Description</th>
@@ -612,7 +616,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -632,14 +636,13 @@
     <td>
       2. System returns page of events<br>
       4. System returns a page of details about selected event.<br>
-	    6. System returns a message to user confirming they are registered for event.
+      6. System returns a message to user confirming they are registered for event.
     </td>
   </tr>
   <tr>
     <th>Alternate Flow(s)</th>
     <td colspan="2">
-      5.1 User is  not logged in and is prompted to ethier login or register an account.<br>
-      5.2 User decides they are not interested. Clicks &ldquo;Return to Events&rdquo;<br>
+      5.1 User decides they are not interested. Clicks &ldquo;Return to Events&rdquo;<br>
     </td>
   </tr>
   <tr>
@@ -664,11 +667,11 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
-    <td colspan="2">User is logged in to their CVGS account</td>
+    <td colspan="2">User is logged in to their CVGS account, user is a member</td>
   </tr>
   <tr>
     <th rowspan="2">Basic Flow of Events</th>
@@ -712,15 +715,15 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">User/Visitor views game reviews on website.</td>
+    <td colspan="2">Member/Visitor views game reviews on website.</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User/Visitor</td>
+    <td colspan="2">Member, Visitor</td>
   </tr>
   <tr>
     <th>Preconditions</th>
-    <td colspan="2">User/visitor is on the CVGS website. Browsing games</td>
+    <td colspan="2">User is on the CVGS website. Browsing games.</td>
   </tr>
   <tr>
     <th rowspan="2">Basic Flow of Events</th>
@@ -729,7 +732,7 @@
   </tr>
   <tr>
     <td>
-      1. On finding a game user clicks game 
+      1. On finding a game user clicks the game.
     </td>
     <td>
       2. System returns a details page for the game which contains reviews. 
@@ -761,7 +764,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -811,7 +814,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -852,11 +855,11 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">User connects to friends and family to account</td>
+    <td colspan="2">User connects friends and family to account</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -894,11 +897,11 @@
   </tr>
 </table>
 
-### View another users wishlist
+### View another members wishlist
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">View another users wishlist</td>
+    <td colspan="2">View another members wishlist</td>
   </tr>
   <tr>
     <th>Description</th>
@@ -906,7 +909,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -959,7 +962,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -992,7 +995,7 @@
   </tr>
 </table>
 
-### User Downloads Game
+### Member Downloads Game
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
@@ -1004,7 +1007,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -1043,7 +1046,7 @@
   </tr>
 </table>
 
-### User Checkout
+### Member Checkout
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
@@ -1055,7 +1058,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -1069,7 +1072,7 @@
   <tr>
     <td>
       1. User clicks checkout from the main store page. <br>
-      3. User reviews order and clicks checkout. &ldquo;Download&rdquo;<br>
+      3. User reviews order and clicks checkout.<br>
       5. User clicks &ldquo;Ok&rdquo; if satisfied with the details
     </td>
     <td>
@@ -1108,7 +1111,7 @@
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">User</td>
+    <td colspan="2">Member</td>
   </tr>
   <tr>
     <th>Preconditions</th>
@@ -1199,11 +1202,11 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">Visitor/User searches for a game</td>
+    <td colspan="2">Visitor/Member searches for a game</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
-    <td colspan="2">Visitor/User</td>
+    <td colspan="2">Member, Visitor</td>
   </tr>
   <tr>
     <th>Preconditions</th>
