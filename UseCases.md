@@ -13,7 +13,7 @@
   1. [Add or Modify a shipping address](#add-or-modify-a-shipping-address)
   1. [Delete a shipping address](#delete-a-shipping-address)
   1. [Reset member password](#reset-member-password)
-  1. [Search for event](#search-for-an-event)
+  1. [Search for event](#search-for-event)
   1. [View game reviews](#view-game-reviews)
   1. [Review games](#review-games)
   1. [Rate games](#rate-games)
