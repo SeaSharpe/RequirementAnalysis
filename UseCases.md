@@ -420,14 +420,15 @@
       3. User selects &ldquo;Shipping Options&rdquo; <br>
       5. User clicks &ldquo;Add or Update Shipping Address&rdquo;<br>
       7. User enters details and clicks Submit<br>
-      9. User clicks &ldquo;Confirm&rdquo;
+      10. User clicks &ldquo;Confirm&rdquo;
     </td>
     <td>
       2. System returns the &ldquo;Member Profile&rdquo; page<br>
       4. System returns the &ldquo;Shipping details&rdquo; page<br>
       6. System returns address entry form page<br>
       8. System validates information entered. Returns confirmation to user<br>
-      10. System updates the information in the database and returns an email to the user notifying them of the change
+      9. System returns message to user to ask for confirmation<br>
+      11. System updates the information in the database and returns an email to the user notifying them of the change
     </td>
   </tr>
   <tr>
