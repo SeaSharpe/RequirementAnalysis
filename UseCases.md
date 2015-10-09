@@ -214,7 +214,7 @@
   </tr>
   <tr>
     <td>
-      1. User selects &ldquo;Update Profile&rdquo;<br>
+      1. User selects &ldquo;Profile&rdquo;<br>
       3. User checks/unchecks opt in check box and clicks submit
     </td>
     <td>
@@ -267,7 +267,7 @@
   </tr>
   <tr>
     <td>
-      1. User selects &ldquo;Update Profile&rdquo;<br>
+      1. User selects &ldquo;Profile&rdquo;<br>
       3. User selects their preferred platform from a list (ie desktop PC, tablet, or mobile phone) and clicks submit
     </td>
     <td>
@@ -314,7 +314,7 @@
   </tr>
   <tr>
     <td>
-      1.User clicks &ldquo;Update Profile&rdquo;<br>
+      1.User clicks &ldquo;Profile&rdquo;<br>
       3.User selects their preferred game category from the list and then clicks Submit
     </td>
     <td>
@@ -362,7 +362,7 @@
   </tr>
   <tr>
     <td>
-      1. User clicks on &ldquo;Update Profile&rdquo; from main page.<br>
+      1. User clicks on &ldquo;Profile&rdquo; from main page.<br>
       3. User selects &ldquo;Add Credit Card&rdquo;<br>
       5. User enters credit card data and clicks &ldquo;Submit&rdquo;<br>
       7. User clicks &ldquo;Confirm&rdquo;
@@ -416,7 +416,7 @@
   </tr>
   <tr>
     <td>
-      1. User clicks on &ldquo;Update Profile&rdquo; from main page.<br>
+      1. User clicks on &ldquo;Profile&rdquo; from main page.<br>
       3. User selects &ldquo;Shipping Options&rdquo; <br>
       5. User clicks &ldquo;Add or Update Shipping Address&rdquo;<br>
       7. User enters details and clicks Submit<br>
@@ -469,7 +469,7 @@
   </tr>
   <tr>
     <td>
-      1. User clicks on &ldquo;Update Profile&rdquo; from main page.<br>
+      1. User clicks on &ldquo;Profile&rdquo; from main page.<br>
       3. User selects &ldquo;Shipping Options&rdquo; <br>
       5. User clicks &ldquo;Delete Shipping Address&rdquo;<br>
       7. Users confirms message box.
