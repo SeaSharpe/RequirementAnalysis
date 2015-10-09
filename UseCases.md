@@ -13,12 +13,12 @@
   1. [Add or Modify a shipping address](#add-or-modify-a-shipping-address)
   1. [Delete a shipping address](#delete-a-shipping-address)
   1. [Reset member password](#reset-member-password)
-  1. [Search for event (optional registration)](#register-for-an-event)
+  1. [Search for event](#search-for-an-event)
   1. [View game reviews](#view-game-reviews)
   1. [Review games](#review-games)
   1. [Rate games](#rate-games)
   1. [Add friends and family to account](#add-friends-and-family-to-account)
-  1. [View another members wishlist](#view-another-users-wishlist)
+  1. [View another members wishlist](#view-another-members-wishlist)
   1. [Add to Wishlist](#add-to-wishlist)
   1. [Member Downloads Game](#member-downloads-game)
   1. [Member Checkout](#member-checkout)
@@ -552,11 +552,11 @@
 
 
 
-### Search For Event (Optional Registration)
+### Search For Event
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">Register for an event</td>
+    <td colspan="2">Search For Event (optional registration)</td>
   </tr>
   <tr>
     <th>Description</th>
