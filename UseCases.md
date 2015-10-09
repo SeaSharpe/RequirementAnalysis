@@ -536,10 +536,10 @@
   <tr>
     <th>Alternate Flow(s)</th>
     <td colspan="2">
-      1.1 User can also change password in preferences by clicking change password.<br>
+      1.1 User can also change password in profile by clicking change password.<br>
       2.1 System returns a reset page.<br>
       3.1 User is asked to enter/re-enter a new password. User submits the form.<br>
-      4.1 System commits changes and returns user to preferences
+      4.1 System commits changes and returns user to profile
     </td>
   </tr>
   <tr>
