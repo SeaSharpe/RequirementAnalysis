@@ -164,7 +164,7 @@
   </tr>
   <tr>
     <td>
-      1. User selects &ldquo;Update Profile&rdquo;<br>
+      1. User selects &ldquo;Profile&rdquo;<br>
       3. User enters in data and clicks submit.
     </td>
     <td>
