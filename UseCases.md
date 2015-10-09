@@ -485,7 +485,7 @@
     <th>Alternate Flow(s)</th>
     <td colspan="2">
       7.1 User clicks &ldquo;Cancel&rdquo;<br>
-      8.1 System returns the &ldquo;Shipping Options&rdquo; page. No changes are committed to the database
+      8.1 System returns the &ldquo;Profile&rdquo; page. No changes are committed to the database
     </td>
   </tr>
   <tr>
