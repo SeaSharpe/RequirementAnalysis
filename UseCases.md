@@ -1449,7 +1449,7 @@
   </tr>
 </table>
 
-### Post Games
+### Ship Games/Mark Order Processed
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
@@ -1466,6 +1466,7 @@
   <tr>
     <th>Preconditions</th>
     <td colspan="2">Employee is logged in to the CVGS web site.</td>
+    <td colspan="2">Order exists and all items are available.</td>
   </tr>
   <tr>
     <th rowspan="2">Basic Flow of Events</th>
@@ -1474,84 +1475,31 @@
   </tr>
   <tr>
     <td>
-      1.  Employee clicks &ldquo;Post Game button&rdquo;<br>
-      3.  Employee selects a game to post to the web site<br>
-      5.  Employee selects YES
+      1.  Employee clicks &ldquo;Orders button&rdquo;<br>
+      3.  Employee selects an unshipped order to process<br>
+      5.  Employee packages and ships all items and marks the order as 'processed'
     </td>
     <td>
-      2.  System returns a list of available games.<br>
-      4.  System returns &ldquo;Are you sure you wish to post this game?&rdquo;<br>
-      6.  System creates the game, updates the database and returns a message &ldquo;Successfully Posted Game&rdquo; to the           website.  The system then returns the Employee to their Home Screen
-    </td>
-  </tr>
-  <tr>
-    <th>Alternate Flow(s)</th>
-    <td colspan="2">
-      2.1 System doesn't return a list of games<br>
-      4.1 System doesn't ask if the employee wishes to post the game.<br>
-      6.1 System does not create the game, message returned to user is: &ldquo;Game not posted&rdquo;
-    </td>
-  </tr>
-  <tr>
-    <th>Success Guarantee</th>
-    <td colspan="2">Game is posted to web site</td>
-  </tr>
-  <tr>
-    <th>Minimum Guarantee</th>
-    <td colspan="2">Employee will be able to try to post the game again</td>
-  </tr>
-</table>
-
-### Mark Order As Processed
-<table>
-  <tr>
-    <th width="20%">Use Case Name</th>
-    <td colspan="2">Mark Order As Processed</td>
-  </tr>
-  <tr>
-    <th>Description</th>
-    <td colspan="2">The employee marks the order as processed.</td>
-  </tr>
-  <tr>
-    <th>Actor(s)</th>
-    <td colspan="2">Employee</td>
-  </tr>
-  <tr>
-    <th>Preconditions</th>
-    <td colspan="2">Employee is logged in to the employee portal of the CVGS website.</td>
-  </tr>
-  <tr>
-    <th rowspan="2">Basic Flow of Events</th>
-    <th width="35%">Actor</th>
-    <th width="35%">System</th>
-  </tr>
-  <tr>
-    <td>
-      1.  Employee clicks &ldquo;View Unprocessed Orders&rdquo;<br>
-      3.  Employee selects an order to process.<br>
-      5.  Employee selects YES
-    </td>
-    <td>
-      2.  System returns a list of unprocessed orders.<br>
-      4.  System returns &ldquo;Are you sure you wish to process this order?&rdquo;<br>
+      2.  System returns a list of shipped and unshipped orders.<br>
+      4.  System returns a view of the order<br>
       6.  System processes the order and returns a message &ldquo;Successfully Processed Order to the website.  The system            then returns the Employee to their Home Screen
     </td>
   </tr>
   <tr>
     <th>Alternate Flow(s)</th>
     <td colspan="2">
-      2.1 System doesn't return a list of unprocessed orders.<br>
-      4.1 System doesn't ask if the employee wishes to process the order.<br>
-      6.1 System does not process the order,  message returned to user is: &ldquo;Selected order not processed&rdquo;
+      2.1 System doesn't return a list of orders<br>
+      4.1 System doesn't return a view of the order<br>
+      6.1 System does not process the order and returns a mess &ldquo;Unable to Process Order&rdquo;
     </td>
   </tr>
   <tr>
     <th>Success Guarantee</th>
-    <td colspan="2">Order is processed.</td>
+    <td colspan="2">Games are shipped to the member</td>
   </tr>
   <tr>
     <th>Minimum Guarantee</th>
-    <td colspan="2">Employee will be able to try to process the order again.</td>
+    <td colspan="2">Employee will be able to try to mark the order as processed again</td>
   </tr>
 </table>
 
