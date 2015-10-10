@@ -32,8 +32,7 @@
   1. [Add Game](#add-game)
   1. [Edit Game](#edit-game)
   1. [Delete Game](#delete-game)
-  1. [Post Games](#post-games)
-  1. [Mark Order As Processed](#mark-order-as-processed)
+  1. [Ship Games](#ship-gamesmark-order-processed)
   1. [Approve Reviews](#approve-reviews)
   1. [View Report](#view-report)
   1. [Print Reports](#print-reports)
@@ -1453,11 +1452,11 @@
 <table>
   <tr>
     <th width="20%">Use Case Name</th>
-    <td colspan="2">Post Games</td>
+    <td colspan="2">Ship Games/Mark Order Processed</td>
   </tr>
   <tr>
     <th>Description</th>
-    <td colspan="2">The employee posts a game to the web site.</td>
+    <td colspan="2">An employee ships a game to a member and marks the order as processed.</td>
   </tr>
   <tr>
     <th>Actor(s)</th>
@@ -1465,8 +1464,10 @@
   </tr>
   <tr>
     <th>Preconditions</th>
-    <td colspan="2">Employee is logged in to the CVGS web site.</td>
-    <td colspan="2">Order exists and all items are available.</td>
+    <td colspan="2">
+     1. Employee is logged in to the CVGS web site.<br>
+     2. Order exists and all items are available.
+    </td>
   </tr>
   <tr>
     <th rowspan="2">Basic Flow of Events</th>
