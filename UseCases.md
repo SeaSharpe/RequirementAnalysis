@@ -511,7 +511,7 @@
   </tr>
   <tr>
     <th>Preconditions</th>
-    <td colspan="2">User is logged in to a valid account</td>
+    <td colspan="2">None</td>
   </tr>
   <tr>
     <th rowspan="2">Basic Flow of Events</th>
@@ -520,23 +520,22 @@
   </tr>
   <tr>
     <td>
-      1. User forgets their password on login. Clicks &ldquo;Forgot Password&rdquo;<br>
+      1. User forgets their password. Clicks &ldquo;Forgot Password&rdquo; and enters their account username<br>
       3. User receives email saying a password reset has been requested for the account, User clicks link within<br>
-      5. User is asked to enter/re-enter a new password. User submits the form.
+      5. User is asked to enter a new password. User submits the form.
     </td>
     <td>
       2. Systems returns Email to the registered username of the account.<br>
-      4. System returns a reset page.<br>
+      4. System returns a password reset page.<br>
       6. System commits changes to user account. Returns user to login page.
     </td>
   </tr>
   <tr>
     <th>Alternate Flow(s)</th>
     <td colspan="2">
-      1.1 User can also change password in profile by clicking change password.<br>
-      2.1 System returns a reset page.<br>
-      3.1 User is asked to enter/re-enter a new password. User submits the form.<br>
-      4.1 System commits changes and returns user to profile
+      2.1 System does not return an email<br>
+      4.1 System does not return a password reset page<br>
+      6.1 System does not commit changes, password is not reset.<br>
     </td>
   </tr>
   <tr>
