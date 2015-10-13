@@ -35,7 +35,6 @@
   1. [Ship Games](#ship-gamesmark-order-processed)
   1. [Approve Reviews](#approve-reviews)
   1. [View Report](#view-report)
-  1. [Print Reports](#print-reports)
 
 ## Diagrams
 ![Members and Visitors Diagram](./UseCases1.png)
@@ -1432,7 +1431,7 @@
   <tr>
     <th>Alternate Flow(s)</th>
     <td colspan="2">
-      2.4 System doesn't return a list of games<br>
+      2.1 System doesn't return a list of games<br>
       4.1 System doesn't display dialogue to user.<br>
       6.1 System does not update the database, message returned to user is: &ldquo;Game not Deleted&rdquo;
     </td>
@@ -1482,7 +1481,7 @@
     <td>
       2.  System returns a list of shipped and unshipped orders.<br>
       4.  System returns a view of the order<br>
-      6.  System processes the order and returns a message &ldquo;Successfully Processed Order to the website.  The system            then returns the Employee to their Home Screen
+      6.  System processes the order and returns a message &ldquo;Successfully Processed Order&rdquo; to the website. The system then returns the Employee to their Home Screen
     </td>
   </tr>
   <tr>
@@ -1596,56 +1595,6 @@
   <tr>
     <th>Success Guarantee</th>
     <td colspan="2">Selected report is returned for viewing.</td>
-  </tr>
-  <tr>
-    <th>Minimum Guarantee</th>
-    <td colspan="2">Employee will be able to try view the report again.</td>
-  </tr>
-</table>
-
-### Print Reports
-<table>
-  <tr>
-    <th width="20%">Use Case Name</th>
-    <td colspan="2">Print Reports</td>
-  </tr>
-  <tr>
-    <th>Description</th>
-    <td colspan="2">The employee prints reports.</td>
-  </tr>
-  <tr>
-    <th>Actor(s)</th>
-    <td colspan="2">Employee</td>
-  </tr>
-  <tr>
-    <th>Preconditions</th>
-    <td colspan="2">Employee is logged in to the employee portal of the CVGS website.</td>
-  </tr>
-  <tr>
-    <th rowspan="2">Basic Flow of Events</th>
-    <th width="35%">Actor</th>
-    <th width="35%">System</th>
-  </tr>
-  <tr>
-    <td>
-      1.  Employee clicks &ldquo;View Reports&rdquo;<br>
-      3.  Employee selects a report to print from the list and clicks &ldquo;Print&rdquo; on that report.
-   </td>
-    <td>
-      2.  System returns a list of available reports<br>
-      4.  System prints the selected report.
-   </td>
-  </tr>
-  <tr>
-    <th>Alternate Flow(s)</th>
-    <td colspan="2">
-      2.1 System doesn't return a list of available reports.<br>
-      4.1 System does not print the selected report.
-    </td>
-  </tr>
-  <tr>
-    <th>Success Guarantee</th>
-    <td colspan="2">Selected report is printed.</td>
   </tr>
   <tr>
     <th>Minimum Guarantee</th>
